@@ -100,16 +100,49 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
+/* CARD */
 .card {
     background: #fff;
-    padding: 20px;
     width: 250px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+/* IMAGE BLOCK */
+.card-img {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TRANSPARENT IMPRINT */
+.imprint {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    text-align: center;
+    padding: 6px;
+    font-size: 14px;
 }
 
 .card h3 {
-    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    padding: 0 10px;
 }
 
 /* ABOUT */
@@ -175,34 +208,59 @@ footer {
 <!-- SERVICES -->
 <section class="services">
     <h2>Our Services</h2>
+
     <div class="service-box">
 
         <div class="card">
+            <div class="card-img">
+                <img src="back.jpg" alt="Haircuts">
+                <div class="imprint">Premium Haircuts</div>
+            </div>
             <h3>Haircuts</h3>
             <p>Modern and classic styles tailored for you.</p>
         </div>
 
         <div class="card">
+            <div class="card-img">
+                <img src="face.jpg" alt="Beard Grooming">
+                <div class="imprint">Sharp Beard Styling</div>
+            </div>
             <h3>Beard Grooming</h3>
             <p>Sharp trims and shaping for a clean look.</p>
         </div>
 
         <div class="card">
+            <div class="card-img">
+                <img src="mac.jpg" alt="Hair Styling">
+                <div class="imprint">Professional Styling</div>
+            </div>
             <h3>Hair Styling</h3>
             <p>Professional styling for any occasion.</p>
         </div>
 
         <div class="card">
+            <div class="card-img">
+                <img src="int.jpg" alt="Massage">
+                <div class="imprint">Relaxing Massage</div>
+            </div>
             <h3>Massage</h3>
             <p>Relaxing body massage to refresh your mind and body.</p>
         </div>
 
         <div class="card">
+            <div class="card-img">
+                <img src="kid.jpg" alt="Pedicure">
+                <div class="imprint">Foot Care</div>
+            </div>
             <h3>Pedicure</h3>
             <p>Professional foot care for clean and healthy feet.</p>
         </div>
 
         <div class="card">
+            <div class="card-img">
+                <img src="face.jpg" alt="Manicure">
+                <div class="imprint">Hand Styling</div>
+            </div>
             <h3>Manicure</h3>
             <p>Keep your hands neat, clean, and stylish.</p>
         </div>
@@ -210,7 +268,7 @@ footer {
     </div>
 </section>
 
-<!-- ABOUT -->/
+<!-- ABOUT -->
 <section class="about">
     <h2>About Us</h2>
     <p>We are a professional barbershop offering top-quality grooming services with experienced stylists and a comfortable environment.</p>
@@ -230,4 +288,4 @@ footer {
 </footer>
 
 </body>
-</html>9
+</html>

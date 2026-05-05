@@ -99,23 +99,31 @@ nav a:hover {
     justify-content: center;
 }
 
-/* BACK BUTTON */
+/* VIDEO */
+video {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* BOOK BUTTON */
 .back {
     text-align: center;
     margin: 40px;
 }
 
 .btn {
-    padding: 12px 25px;
-    background: #f4b400;
+    padding: 14px 30px;
+    background: linear-gradient(45deg, #f4b400, #ffcc00);
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .btn:hover {
-    background: #d99a00;
+    opacity: 0.9;
 }
 </style>
 </head>
@@ -136,7 +144,7 @@ nav a:hover {
     <p>Professional grooming tailored to your style</p>
 </section>
 
-<!-- SERVICES WITH IMAGES -->
+<!-- SERVICES -->
 <section class="services">
     <div class="service-container">
 
@@ -166,29 +174,20 @@ nav a:hover {
     </div>
 </section>
 
-<!-- VIDEOS (FIXED) -->
+<!-- VIDEOS -->
 <section class="videos">
     <h2>Watch Our Work</h2>
 
     <div class="video-container">
-
-        <video height="170" controls>
-            <source src="video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-        <video height="170" controls>
-            <source src="vida.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
+        <video src="video.mp4" controls></video>
+        <video src="vida.mp4" controls></video>
     </div>
 </section>
 
-<!-- BACK BUTTON -->
+<!-- BOOK BUTTON -->
 <div class="back">
-    <a href="index.html">
-        <button class="btn">Back to Home</button>
+    <a href="get.html">
+        <button class="btn">Book a Service</button>
     </a>
 </div>
 

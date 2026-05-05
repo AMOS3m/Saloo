@@ -13,6 +13,31 @@ body {
     background: linear-gradient(to right, #f5f5f5, #eaeaea);
 }
 
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 15px 30px;
+}
+
+nav h2 {
+    color: #f4b400;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #f4b400;
+}
+
 /* INTRO SECTION */
 .intro {
     text-align: center;
@@ -77,26 +102,6 @@ body {
     box-shadow: 0 15px 30px rgba(0,0,0,0.08);
     cursor: pointer;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.card::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #f4b400, #ffcc00, #f4b400);
-    z-index: -1;
-    border-radius: 20px;
-    opacity: 0;
-    transition: 0.3s;
-}
-
-.card:hover::before {
-    opacity: 1;
 }
 
 .card:hover {
@@ -143,7 +148,6 @@ body {
     text-align: center;
     width: 320px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    animation: popUp 0.3s ease;
 }
 
 .modal-content h3 {
@@ -155,7 +159,6 @@ body {
     margin-bottom: 20px;
     font-size: 16px;
     color: #444;
-    line-height: 1.5;
 }
 
 .btn {
@@ -170,22 +173,18 @@ body {
     background: linear-gradient(45deg, #28a745, #34d058);
     color: white;
 }
-
-/* ANIMATION */
-@keyframes popUp {
-    from {
-        transform: scale(0.7);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
 </style>
 </head>
 
 <body>
+
+<!-- NAVBAR (LINK TO services.html ADDED HERE) -->
+<nav>
+    <h2>Elite Cuts</h2>
+    <div>
+        <a href="services.html">Services</a>
+    </div>
+</nav>
 
 <!-- INTRO -->
 <section class="intro">
@@ -246,15 +245,13 @@ body {
     </div>
 </div>
 
-<!-- SCRIPT -->
 <script>
 function openModal(service, price) {
     document.getElementById("modal").style.display = "flex";
     document.getElementById("modalText").innerText =
-        "Your choice has been submitted successfully.\n\n" +
         "Service: " + service +
         "\nAmount: Ksh " + price +
-        "\n\nPay the required amount to Till Number: 12345";
+        "\n\nPay Till Number: 12345";
 }
 
 function closeModal() {

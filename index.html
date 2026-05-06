@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,65 +83,6 @@ nav ul li a:hover {
     background: #d99a00;
 }
 
-/* ===== GALLERY SECTION (IMAGES ONLY) ===== */
-.gallery {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.gallery h2 {
-    margin-bottom: 30px;
-}
-
-.gallery-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.gallery-box img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-}
-
-.gallery-box img:hover {
-    transform: scale(1.05);
-}
-
-/* ===== SERVICES TEXT ONLY ===== */
-.services {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.services h2 {
-    margin-bottom: 30px;
-}
-
-.service-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.service {
-    background: #fff;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.service h3 {
-    margin-bottom: 10px;
-}
-
 /* ABOUT */
 .about {
     padding: 60px 20px;
@@ -157,6 +97,35 @@ nav ul li a:hover {
     text-align: center;
     background: #f4b400;
     color: #000;
+}
+
+/* SOCIAL MEDIA */
+.social {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.social h2 {
+    margin-bottom: 20px;
+}
+
+.social a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.facebook {
+    background: #1877F2;
 }
 
 /* FOOTER */
@@ -183,7 +152,7 @@ footer {
     <h1>Elite Cuts</h1>
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="#about">About</a></li>
         <li>Contact</li>
     </ul>
@@ -194,59 +163,11 @@ footer {
     <div>
         <h2>Fresh Cuts, Fresh Confidence</h2>
         <p>Your style, our passion. Experience premium grooming.</p>
-        <button class="btn">Book Appointment</button>
-    </div>
-</section>
 
-<!-- IMAGE GALLERY -->
-<section class="gallery">
-    <h1>welcome to Elite cuts</h1>
-    <div class="gallery-box">
-        <img src="back.jpg" alt="Haircuts">
-        <img src="face.jpg" alt="Beard Grooming">
-        <img src="mac.jpg" alt="Hair Styling">
-        <img src="int.jpg" alt="Massage">
-        <img src="kid.jpg" alt="Pedicure">
-        <img src="face.jpg" alt="Manicure">
-    </div>
-</section>
-
-<!-- SERVICES (TEXT ONLY) -->
-<section class="services" id="services">
-    <h2>Our Services</h2>
-
-    <div class="service-list">
-
-        <div class="service">
-            <h3>Haircuts</h3>
-            <p>Modern and classic styles tailored for you.</p>
-        </div>
-
-        <div class="service">
-            <h3>Beard Grooming</h3>
-            <p>Sharp trims and shaping for a clean look.</p>
-        </div>
-
-        <div class="service">
-            <h3>Hair Styling</h3>
-            <p>Professional styling for any occasion.</p>
-        </div>
-
-        <div class="service">
-            <h3>Massage</h3>
-            <p>Relaxing body massage to refresh your mind.</p>
-        </div>
-
-        <div class="service">
-            <h3>Pedicure</h3>
-            <p>Clean and healthy foot care.</p>
-        </div>
-
-        <div class="service">
-            <h3>Manicure</h3>
-            <p>Neat and stylish hand care.</p>
-        </div>
-
+        <!-- LINK FIXED -->
+        <a href="services.html">
+            <button class="btn">Book Appointment</button>
+        </a>
     </div>
 </section>
 
@@ -259,7 +180,24 @@ footer {
 <!-- CTA -->
 <section class="cta">
     <h2>Ready for a New Look?</h2>
-    <button class="btn">Book Now</button>
+
+    <!-- LINK FIXED -->
+    <a href="services.html">
+        <button class="btn">Book Now</button>
+    </a>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section class="social">
+    <h2>Follow & Contact Us</h2>
+
+    <a class="whatsapp" href="https://wa.me/254700000000" target="_blank">
+        WhatsApp
+    </a>
+
+    <a class="facebook" href="https://facebook.com" target="_blank">
+        Facebook
+    </a>
 </section>
 
 <!-- FOOTER -->

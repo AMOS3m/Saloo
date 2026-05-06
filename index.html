@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +84,37 @@ nav ul li a:hover {
     background: #d99a00;
 }
 
-/* SERVICES */
+/* ===== GALLERY SECTION (IMAGES ONLY) ===== */
+.gallery {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    margin-bottom: 30px;
+}
+
+.gallery-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-box img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.gallery-box img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== SERVICES TEXT ONLY ===== */
 .services {
     padding: 60px 20px;
     text-align: center;
@@ -93,56 +124,23 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-.service-box {
+.service-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
-/* CARD */
-.card {
+.service {
     background: #fff;
+    padding: 20px;
     width: 250px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-    padding-bottom: 15px;
 }
 
-/* IMAGE BLOCK */
-.card-img {
-    position: relative;
-    width: 100%;
-    height: 160px;
-    overflow: hidden;
-}
-
-.card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* TRANSPARENT IMPRINT */
-.imprint {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.4);
-    color: #fff;
-    text-align: center;
-    padding: 6px;
-    font-size: 14px;
-}
-
-.card h3 {
-    margin-top: 10px;
-}
-
-.card p {
-    font-size: 14px;
-    padding: 0 10px;
+.service h3 {
+    margin-bottom: 10px;
 }
 
 /* ABOUT */
@@ -153,10 +151,6 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.about h2 {
-    margin-bottom: 20px;
-}
-
 /* CTA */
 .cta {
     padding: 50px;
@@ -165,6 +159,7 @@ nav ul li a:hover {
     color: #000;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -188,8 +183,8 @@ footer {
     <h1>Elite Cuts</h1>
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li>About</li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
         <li>Contact</li>
     </ul>
 </nav>
@@ -199,77 +194,64 @@ footer {
     <div>
         <h2>Fresh Cuts, Fresh Confidence</h2>
         <p>Your style, our passion. Experience premium grooming.</p>
-        <a href="services.html">
-            <button class="btn">Book Appointment</button>
-        </a>
+        <button class="btn">Book Appointment</button>
     </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services">
+<!-- IMAGE GALLERY -->
+<section class="gallery">
+    <h2>Our Gallery</h2>
+    <div class="gallery-box">
+        <img src="back.jpg" alt="Haircuts">
+        <img src="face.jpg" alt="Beard Grooming">
+        <img src="mac.jpg" alt="Hair Styling">
+        <img src="int.jpg" alt="Massage">
+        <img src="kid.jpg" alt="Pedicure">
+        <img src="face.jpg" alt="Manicure">
+    </div>
+</section>
+
+<!-- SERVICES (TEXT ONLY) -->
+<section class="services" id="services">
     <h2>Our Services</h2>
 
-    <div class="service-box">
+    <div class="service-list">
 
-        <div class="card">
-            <div class="card-img">
-                <img src="back.jpg" alt="Haircuts">
-                <div class="imprint">Premium Haircuts</div>
-            </div>
+        <div class="service">
             <h3>Haircuts</h3>
             <p>Modern and classic styles tailored for you.</p>
         </div>
 
-        <div class="card">
-            <div class="card-img">
-                <img src="face.jpg" alt="Beard Grooming">
-                <div class="imprint">Sharp Beard Styling</div>
-            </div>
+        <div class="service">
             <h3>Beard Grooming</h3>
             <p>Sharp trims and shaping for a clean look.</p>
         </div>
 
-        <div class="card">
-            <div class="card-img">
-                <img src="mac.jpg" alt="Hair Styling">
-                <div class="imprint">Professional Styling</div>
-            </div>
+        <div class="service">
             <h3>Hair Styling</h3>
             <p>Professional styling for any occasion.</p>
         </div>
 
-        <div class="card">
-            <div class="card-img">
-                <img src="int.jpg" alt="Massage">
-                <div class="imprint">Relaxing Massage</div>
-            </div>
+        <div class="service">
             <h3>Massage</h3>
-            <p>Relaxing body massage to refresh your mind and body.</p>
+            <p>Relaxing body massage to refresh your mind.</p>
         </div>
 
-        <div class="card">
-            <div class="card-img">
-                <img src="kid.jpg" alt="Pedicure">
-                <div class="imprint">Foot Care</div>
-            </div>
+        <div class="service">
             <h3>Pedicure</h3>
-            <p>Professional foot care for clean and healthy feet.</p>
+            <p>Clean and healthy foot care.</p>
         </div>
 
-        <div class="card">
-            <div class="card-img">
-                <img src="face.jpg" alt="Manicure">
-                <div class="imprint">Hand Styling</div>
-            </div>
+        <div class="service">
             <h3>Manicure</h3>
-            <p>Keep your hands neat, clean, and stylish.</p>
+            <p>Neat and stylish hand care.</p>
         </div>
 
     </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about">
+<section class="about" id="about">
     <h2>About Us</h2>
     <p>We are a professional barbershop offering top-quality grooming services with experienced stylists and a comfortable environment.</p>
 </section>
@@ -277,9 +259,7 @@ footer {
 <!-- CTA -->
 <section class="cta">
     <h2>Ready for a New Look?</h2>
-    <a href="services.html">
-        <button class="btn">Book Now</button>
-    </a>
+    <button class="btn">Book Now</button>
 </section>
 
 <!-- FOOTER -->

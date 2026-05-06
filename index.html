@@ -45,19 +45,30 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li a:hover {
-    color: #f4b400;
-}
-
-/* HERO */
+/* HERO WITH IMAGE LAYER */
 .hero {
     height: 90vh;
-    background: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70') center/cover no-repeat;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     text-align: center;
+    background: url('back.jpg') center/cover no-repeat;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero div {
+    position: relative;
+    z-index: 1;
 }
 
 .hero h2 {
@@ -79,35 +90,71 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.btn:hover {
-    background: #d99a00;
-}
-
-/* ABOUT */
+/* ABOUT WITH IMAGE */
 .about {
     padding: 60px 20px;
     background: #000;
     color: #fff;
     text-align: center;
+    position: relative;
 }
 
-/* CTA */
+.about img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 4px solid #f4b400;
+}
+
+/* CTA WITH IMAGE BACKGROUND */
 .cta {
-    padding: 50px;
+    padding: 70px 20px;
     text-align: center;
-    background: #f4b400;
-    color: #000;
+    color: #fff;
+    position: relative;
+    background: url('mac.jpg') center/cover no-repeat;
 }
 
-/* SOCIAL MEDIA */
+.cta::before {
+    content: "";
+    position: absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.cta div {
+    position: relative;
+    z-index: 1;
+}
+
+/* SOCIAL SECTION WITH GALLERY */
 .social {
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
     background: #fff;
 }
 
 .social h2 {
     margin-bottom: 20px;
+}
+
+.gallery-strip {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.gallery-strip img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .social a {
@@ -120,13 +167,8 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-.whatsapp {
-    background: #25D366;
-}
-
-.facebook {
-    background: #1877F2;
-}
+.whatsapp { background: #25D366; }
+.facebook { background: #1877F2; }
 
 /* FOOTER */
 footer {
@@ -163,8 +205,6 @@ footer {
     <div>
         <h2>Fresh Cuts, Fresh Confidence</h2>
         <p>Your style, our passion. Experience premium grooming.</p>
-
-        <!-- LINK FIXED -->
         <a href="services.html">
             <button class="btn">Book Appointment</button>
         </a>
@@ -174,22 +214,35 @@ footer {
 <!-- ABOUT -->
 <section class="about" id="about">
     <h2>About Us</h2>
-    <p>We are a professional barbershop offering top-quality grooming services with experienced stylists and a comfortable environment.</p>
+
+    <img src="face.jpg" alt="About Elite Cuts">
+
+    <p>
+        We are a professional barbershop offering top-quality grooming services with experienced stylists and a comfortable environment.
+    </p>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-    <h2>Ready for a New Look?</h2>
-
-    <!-- LINK FIXED -->
-    <a href="services.html">
-        <button class="btn">Book Now</button>
-    </a>
+    <div>
+        <h2>Ready for a New Look?</h2>
+        <a href="services.html">
+            <button class="btn">Book Now</button>
+        </a>
+    </div>
 </section>
 
 <!-- SOCIAL MEDIA -->
 <section class="social">
-    <h2>Follow & Contact Us</h2>
+    <h2>Our Work Gallery</h2>
+
+    <div class="gallery-strip">
+        <img src="back.jpg">
+        <img src="face.jpg">
+        <img src="mac.jpg">
+        <img src="int.jpg">
+        <img src="kid.jpg">
+    </div>
 
     <a class="whatsapp" href="https://wa.me/254700000000" target="_blank">
         WhatsApp

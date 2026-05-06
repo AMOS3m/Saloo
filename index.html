@@ -67,8 +67,6 @@ nav ul li a {
     justify-content: center;
     color: #fff;
     text-align: center;
-
-    /* IMPROVED IMAGE QUALITY */
     background: url('bd.jpg') no-repeat center center/cover;
 }
 
@@ -78,8 +76,6 @@ nav ul li a {
     top:0; left:0;
     width:100%;
     height:100%;
-
-    /* REDUCED DARKNESS (clearer image) */
     background: rgba(0,0,0,0.4);
 }
 
@@ -145,6 +141,41 @@ nav ul li a {
 .cta div {
     position: relative;
     z-index: 1;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.testimonials h2 {
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background: #f9f9f9;
+    padding: 20px;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial h4 {
+    color: #f4b400;
 }
 
 /* SOCIAL */
@@ -283,6 +314,28 @@ footer {
     </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <p>"Best haircut I've ever had. Professional and friendly staff!"</p>
+            <h4>- Brian M.</h4>
+        </div>
+
+        <div class="testimonial">
+            <p>"Clean environment and top-notch service. Highly recommend."</p>
+            <h4>- Kevin O.</h4>
+        </div>
+
+        <div class="testimonial">
+            <p>"I always leave feeling fresh and confident. Great place!"</p>
+            <h4>- James K.</h4>
+        </div>
+    </div>
+</section>
+
 <!-- SOCIAL -->
 <section class="social">
     <h2>Welcome to Elite Cuts</h2>
@@ -305,6 +358,10 @@ footer {
     <p>📍 Nairobi, Kenya</p>
     <p>📞 +254 700 000000</p>
     <p>📧 elitecuts@gmail.com</p>
+
+    <p><strong>🕒 Opening Hours:</strong></p>
+    <p>Monday - Saturday: 9:00 AM – 10:00 PM</p>
+    <p>Sunday: Closed</p>
 
     <a class="btn" href="https://wa.me/254700000000" target="_blank">
         Chat on WhatsApp
